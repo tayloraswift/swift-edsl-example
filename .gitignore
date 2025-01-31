@@ -1,0 +1,10 @@
+/.build
+/.build.ssgc
+/.build.unidoc
+/.ssgc
+/.vscode
+
+/*.artifactbundle
+
+/Packages/
+/Package.resolved

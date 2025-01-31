@@ -1,0 +1,22 @@
+#!/bin/bash
+
+swift build -c release --product KrabbyPatty
+mkdir -p main.artifactbundle/KrabbyPatty
+
+cp .build/release/Modules/KrabbyPatty.swiftmodule main.artifactbundle/KrabbyPatty
+cp .build/release/libKrabbyPatty.so main.artifactbundle/KrabbyPatty
+
+(
+cat <<EOF
+{
+    "schemaVersion": "1.2",
+    "artifacts": {
+        "MyLibrary": {
+            "type": "reloadableLibrary",
+            "version": "1.0.0",
+            "variants": [{ "path": "KrabbyPatty" }]
+        }
+    }
+}
+EOF
+) > main.artifactbundle/info.json
