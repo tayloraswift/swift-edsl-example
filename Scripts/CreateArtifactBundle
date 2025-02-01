@@ -18,8 +18,8 @@ cat <<EOF
     "schemaVersion": "1.2",
     "artifacts": {
         "MyLibrary": {
-            "type": "reloadableLibrary",
-            "version": "1.0.0",
+            "type": "library",
+            "version": "$1",
             "variants": [{ "path": "KrabbyPatty" }]
         }
     }

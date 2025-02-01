@@ -24,7 +24,7 @@ jobs:
                 uses: actions/checkout@v3
 
             -   name: Build artifacts
-                run: Scripts/CreateArtifactBundle
+                run: Scripts/CreateArtifactBundle ${{ github.head_ref || github.ref_name }}
 
             -   name: Upload artifacts
                 env:
@@ -71,7 +71,7 @@ jobs:
                         -v $PWD:/package \
                         -w /package \
                         swift:6.0.3-${{ matrix.os.codename }} \
-                        Scripts/CreateArtifactBundle
+                        Scripts/CreateArtifactBundle ${{ github.head_ref || github.ref_name }}
 
             -   name: Upload artifacts
                 env:
