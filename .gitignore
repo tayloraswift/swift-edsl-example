@@ -5,7 +5,7 @@
 /.vscode
 
 /*.artifactbundle
-/*.artifactbundle.tar.gz
+/*.artifactbundle.zip
 
 /Packages/
 /Package.resolved
