@@ -31,7 +31,7 @@ jobs:
                     LIBRARY_PLATFORM: "${{ runner.os }}-${{ runner.arch }}"
                     LIBRARY_VERSION: ${{ github.head_ref || github.ref_name }}
 
-                run: Scripts/Deploy main.artifactbundle.tar.gz
+                run: Scripts/Deploy main.artifactbundle.zip
 
     linux:
         strategy:
@@ -78,4 +78,4 @@ jobs:
                     LIBRARY_PLATFORM: "${{ matrix.os.version }}-${{ matrix.arch.name }}"
                     LIBRARY_VERSION: ${{ github.head_ref || github.ref_name }}
 
-                run: Scripts/Deploy main.artifactbundle.tar.gz
+                run: Scripts/Deploy main.artifactbundle.zip
