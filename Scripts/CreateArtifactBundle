@@ -4,7 +4,7 @@ swift --version
 swift build -c release --product KrabbyPatty
 mkdir -p main.artifactbundle/KrabbyPatty
 
-cp .build/release/Modules/KrabbyPatty.swiftmodule main.artifactbundle/KrabbyPatty
+cp .build/release/Modules/KrabbyPatty.swiftinterface main.artifactbundle/KrabbyPatty
 
 for file in .build/release/*.{so,dylib}; do
     if [ -f $file ]; then
