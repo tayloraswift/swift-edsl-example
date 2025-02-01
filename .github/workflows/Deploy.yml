@@ -70,7 +70,7 @@ jobs:
                     docker run --rm \
                         -v $PWD:/package \
                         -w /package \
-                        swift:6.0.3-${{ matrix.codename }} \
+                        swift:6.0.3-${{ matrix.os.codename }} \
                         Scripts/CreateArtifactBundle
 
             -   name: Upload artifacts
