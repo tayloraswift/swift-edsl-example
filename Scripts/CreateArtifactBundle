@@ -27,4 +27,4 @@ cat <<EOF
 EOF
 ) > main.artifactbundle/info.json
 
-tar -czf main.artifactbundle.tar.gz main.artifactbundle
+zip -r main.artifactbundle.zip main.artifactbundle
