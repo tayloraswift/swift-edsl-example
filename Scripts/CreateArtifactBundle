@@ -26,5 +26,3 @@ cat <<EOF
 }
 EOF
 ) > main.artifactbundle/info.json
-
-zip -r main.artifactbundle.zip main.artifactbundle
