@@ -13,7 +13,7 @@ fi
 
 while [[ $# -gt 0 ]]; do
     aws s3 cp $1 \
-        s3://tayloraswift/swift-rlp-example/$LIBRARY_VERSION/$LIBRARY_PLATFORM/$1 \
+        s3://tayloraswift/swift-edsl-example/$LIBRARY_VERSION/$LIBRARY_PLATFORM/$1 \
         --content-type application/zip
     shift
 done
